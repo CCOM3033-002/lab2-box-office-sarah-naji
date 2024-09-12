@@ -30,8 +30,8 @@ int main (){
      cin >> child_tickets;
 
      // Calculate the profits
-     double adultTotal = adultTicketPrice * adult_tickets; // Total adult tickets sold
-     double childTotal = childTicketPrice * child_tickets; // Total child tickets sold
+     double adultTotal = ADULT_TICKET_PRICE * adult_tickets; // Total adult tickets sold
+     double childTotal = CHILD_TICKET_PRICE * child_tickets; // Total child tickets sold
      
      // Calcular the Gross Profit
     double grossProfit = adultTotal + childTotal;
@@ -42,3 +42,16 @@ int main (){
     // Calculate the Quantity/ Amount Paid to the Distributor
     double amountDistributor = grossProfit - netProfit;
     
+    cout << endl;
+    cout << fixed << showpoint << setprecision(2);
+
+
+    cout << left << setw(30) << "Movie Name:" << "\"" << movieName << "\"" << endl;
+    cout << left << setw(30) << "Adult Tickets Sold:" << setw(5) << adult_tickets << endl;
+    cout << left << setw(30) << "Child Tickets Sold:" << setw(5) << child_tickets << endl;
+    cout << left << setw(30) << "Gross Box Office Profit:" << "$ " << setw(9) << grossBoxOfficeProfit << endl;
+    cout << left << setw(30) << "Net Box Office Profit:" << "$ " << setw(9) << netBoxOfficeProfit << endl;
+    cout << left << setw(30) << "Amount Paid to Distributor:" << "$ " << setw(9) << amountPaidToDistributor << endl;
+
+    return 0;
+}
