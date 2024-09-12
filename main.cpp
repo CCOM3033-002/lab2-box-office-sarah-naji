@@ -7,7 +7,7 @@ using namespace std;
 
 int main (){ 
     // Purpose of program
-    cout << "This program calculates the Gross and Net Box Office Profit and the Distributer's Profit of a movie playing in the theater. << endl;
+    cout << "This program calculates the Gross and Net Box Office Profit and the Distributer's Profit of a movie playing in the theater." << endl;
 
 
     // Variables constant
@@ -37,7 +37,7 @@ int main (){
     double grossProfit = adultTotal + childTotal;
 
     // Calculate the Net Box Office Profit
-    double netProfit = grossProfit * theaterPercentage;
+    double netProfit = grossProfit * THEATER_PERCENTAGE;
 
     // Calculate the Quantity/ Amount Paid to the Distributor
     double amountDistributor = grossProfit - netProfit;
@@ -49,9 +49,9 @@ int main (){
     cout << left << setw(30) << "Movie Name:" << "\"" << movieName << "\"" << endl;
     cout << left << setw(30) << "Adult Tickets Sold:" << setw(5) << adult_tickets << endl;
     cout << left << setw(30) << "Child Tickets Sold:" << setw(5) << child_tickets << endl;
-    cout << left << setw(30) << "Gross Box Office Profit:" << "$ " << setw(9) << grossBoxOfficeProfit << endl;
-    cout << left << setw(30) << "Net Box Office Profit:" << "$ " << setw(9) << netBoxOfficeProfit << endl;
-    cout << left << setw(30) << "Amount Paid to Distributor:" << "$ " << setw(9) << amountPaidToDistributor << endl;
+    cout << left << setw(30) << "Gross Box Office Profit:" << "$ " << setw(9) << grossProfit << endl;
+    cout << left << setw(30) << "Net Box Office Profit:" << "$ " << setw(9) << netProfit << endl;
+    cout << left << setw(30) << "Amount Paid to Distributor:" << "$ " << setw(9) << amountDistributor << endl;
 
     return 0;
 }
