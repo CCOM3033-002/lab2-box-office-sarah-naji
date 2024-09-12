@@ -28,4 +28,17 @@ int main (){
 
      cout << "Enter the amount of child tickets sold: ";
      cin >> child_tickets;
+
+     // Calculate the profits
+     double adultTotal = adultTicketPrice * adult_tickets; // Total adult tickets sold
+     double childTotal = childTicketPrice * child_tickets; // Total child tickets sold
+     
+     // Calcular the Gross Profit
+    double grossProfit = adultTotal + childTotal;
+
+    // Calculate the Net Box Office Profit
+    double netProfit = grossProfit * theaterPercentage;
+
+    // Calculate the Quantity/ Amount Paid to the Distributor
+    double amountDistributor = grossProfit - netProfit;
     
